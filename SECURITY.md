@@ -10,4 +10,4 @@
 
 ## Reporting a Vulnerability
 
-Report a vulnerability [here.](https://github.com/Gameking1happy-Development/GK1H-Vanilla-Plus/security/advisories/new)
+Report a vulnerability [here.](https://github.com/Gameking1happy-Development/GK1H-Recipes/security/advisories/new)
