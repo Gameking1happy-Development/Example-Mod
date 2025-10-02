@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mr_better_ironrecycling"
+    }
+  ],
+  "replace": false,
+  "values": [
+    {
+      "id": "travelersbackpack:iron_tier_upgrade",
+"required": false
+    },
+    {
+      "id": "hoppergadgetry:grated_hopper",
+"required": false
+    },
+    {
+      "id": "hoppergadgetry:chute_minecart",
+"required": false
+    },
+    {
+      "id": "hangglider:glider_framework",
+"required": false
+    },
+    {
+      "id": "hangglider:hang_glider",
+"required": false
+    },
+    {
+      "id": "hangglider:reinforced_hang_glider",
+"required": false
+    },
+    {
+      "id": "travelersbackpack:iron",
+"required": false
+    }
+  ]
+}

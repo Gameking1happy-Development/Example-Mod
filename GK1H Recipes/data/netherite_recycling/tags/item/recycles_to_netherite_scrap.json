@@ -1,0 +1,71 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mr_netherite_recycling"
+    }
+  ],
+  "replace": false,
+  "values": [
+    {
+      "id": "spikyspikes:netherite_spike",
+      "required": false
+    },
+    {
+      "id": "travelersbackpack:netherite_tier_upgrade",
+      "required": false
+    },
+    {
+      "id": "travelersbackpack:netherite_tier_upgrade",
+      "required": false
+    },
+    {
+      "id": "travelersbackpack:netherite_tier_upgrade",
+      "required": false
+    },
+    {
+      "id": "travelersbackpack:netherite_tier_upgrade",
+      "required": false
+    },
+    {
+      "id": "travelersbackpack:netherite_tier_upgrade",
+      "required": false
+    },
+    {
+      "id": "metalbundles:netherite_bundle",
+      "required": false
+    },
+    {
+      "id": "netheriteextras:netherite_horse_armor",
+    "required": false
+    },
+    {
+      "id": "netheriteextras:netherite_wolf_armor",
+    "required": false
+    },
+    {
+      "id": "#advancednetherite:tier/armor",
+    "required": false
+    },
+    {
+      "id": "#advancednetherite:tier/tools",
+    "required": false
+    },
+    {
+      "id": "enchantinginfuser:advanced_enchanting_infuser",
+    "required": false
+    },
+    {
+      "id": "travelersbackpack:netherite",
+    "required": false
+    },
+    {
+      "id": "netheriteextras:enchanted_netherite_apple",
+    "required": false
+    },
+    {
+      "id": "netheriteextras:totem_of_neverdying",
+    "required": false
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mr_copper_recycling"
+    }
+  ],
+  "replace": false,
+  "values": [
+    {
+      "id": "metalbundles:copper_bundle",
+"required": false
+    },
+    {
+      "id": "minecraft:brush",
+"required": false
+    },
+    {
+      "id": "illagerinvasion:imbuing_table",
+"required": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "metalbundles"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:leather"
+    },
+    "-": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "-",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "metalbundles:leather_bundle"
+  }
+}

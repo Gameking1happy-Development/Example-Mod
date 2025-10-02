@@ -1,0 +1,47 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mr_better_ironrecycling"
+    }
+  ],
+  "replace": false,
+  "values": [
+    {
+      "id": "travelersbackpack:hose",
+"required": false
+    },
+    {
+      "id": "travelersbackpack:hose_nozzle",
+"required": false
+    },
+    {
+      "id": "metalbundles:iron_bundle",
+"required": false
+    },
+    {
+      "id": "mutantmonsters:creeper_minion_tracker",
+"required": false
+    },
+    {
+      "id": "bagofholding:iron_bag_of_holding",
+"required": false
+    },
+    {
+      "id": "hoppergadgetry:duct",
+"required": false
+    },
+    {
+      "id": "ytones:flat_lamp",
+"required": false
+    },
+    {
+      "id": "minecraft:soul_lantern",
+"required": false
+    },
+    {
+      "id": "moblassos:hostile_lasso",
+"required": false
+    }
+  ]
+}
