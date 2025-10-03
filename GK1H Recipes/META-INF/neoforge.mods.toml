@@ -3,6 +3,6 @@ loaderVersion = '[1,)'
 license = 'MIT'
 showAsResourcePack = false
 mods = [
-	{ modId = 'gk1h_recipes', version = '1.0.0', displayName = 'GK1H Recipes (NeoForge)', description = "Recipe datapack for 1.21.1 made by GK1H.", logoFile = 'pack.png', credits = 'Gameking1happy Development', updateJSONURL = 'https://modrinth.com/datapack/gk1h-recipes/updates.json?neoforge=only', displayURL = 'https://modrinth.com/datapack/gk1h-recipes' }
+	{ modId = 'gk1h_recipes', version = '1.0.1', displayName = 'GK1H Recipes (NeoForge)', description = "Recipe datapack for 1.21.1 made by GK1H.", logoFile = 'pack.png', credits = 'Gameking1happy Development', updateJSONURL = 'https://modrinth.com/datapack/gk1h-recipes/updates.json?neoforge=only', displayURL = 'https://modrinth.com/datapack/gk1h-recipes' }
 ]
 issueTrackerURL = 'https://github.com/Gameking1happy-Development/GK1H-Recipes/issues'
