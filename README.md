@@ -13,4 +13,4 @@ Adds recycling recipe for Netherite Apple, since using Netherite Recycling tag w
 Some vanilla items added to tags, many items from mods listed and not listed above added to tags.  
 # Links  
 Discord: https://discord.gg/AwJvGzH  
-Modrinth: https://modrinth.com/datapack/gk1h-recipes
+Modrinth: https://modrinth.com/mod/gk1h-recipes
