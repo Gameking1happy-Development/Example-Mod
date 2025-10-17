@@ -1,4 +1,4 @@
-Recipe datapack for 1.21.1 made by GK1H. Willing to backport to older versions or port to later versions.  
+Recipe mod for 1.21.1 made by GK1H.  
 # Mod Version Compatibility  
 ## Advanced Netherite  
 Removes lodestone recipe that uses netherite alloys.  
