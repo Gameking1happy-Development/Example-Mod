@@ -1,0 +1,9 @@
+{
+  "homepage": "https://github.com/Gameking1happy-Development/Example-Mod",
+  "1.21.1": {
+    "1.0.0": "Release."
+  },
+  "promos": {
+    "1.21.1-recommended": "1.0.0"
+  }
+}
