@@ -1,8 +1,8 @@
 package io.github.gameking1happy.examplemod.platform;
 
 import io.github.gameking1happy.examplemod.platform.services.IPlatformHelper;
-import net.fabricmc.loader.api.FabricLoader;
 
+import static net.fabricmc.loader.api.FabricLoader.getInstance;
 public class FabricPlatformHelper implements IPlatformHelper {
 
     @Override
@@ -13,12 +13,12 @@ public class FabricPlatformHelper implements IPlatformHelper {
     @Override
     public boolean isModLoaded(String modId) {
 
-        return FabricLoader.getInstance().isModLoaded(modId);
+        return getInstance().isModLoaded(modId);
     }
 
     @Override
     public boolean isDevelopmentEnvironment() {
 
-        return FabricLoader.getInstance().isDevelopmentEnvironment();
+        return getInstance().isDevelopmentEnvironment();
     }
 }
