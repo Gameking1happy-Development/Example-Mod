@@ -2,9 +2,10 @@
   "homepage": "https://github.com/Gameking1happy-Development/Example-Mod",
   "1.21.1": {
     "1.0.0": "Release.",
-    "1.0.1": "Added example configs and some other changes."
+    "1.0.1": "Added example configs and some other changes.",
+    "1.0.2": "Implemented the core mod into the example mod."
   },
   "promos": {
-    "1.21.1-recommended": "1.0.1"
+    "1.21.1-recommended": "1.0.2"
   }
 }
