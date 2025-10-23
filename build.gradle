@@ -10,5 +10,9 @@ subprojects {
             name = "Fuzs Mod Resources"
             url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
         }
+        maven {
+            name = "GK1H Mod Resources"
+            url = "https://raw.githubusercontent.com/Gameking1happy-Development/Mod-Resources/main/maven/"
+        }
     }
 }

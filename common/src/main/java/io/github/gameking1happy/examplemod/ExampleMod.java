@@ -3,7 +3,7 @@ package io.github.gameking1happy.examplemod;
 import io.github.gameking1happy.examplemod.config.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import static io.github.gameking1happy.examplemod.platform.Services.PLATFORM;
+import static io.github.gameking1happy.gk1hcore.platform.Services.PLATFORM;
 public class ExampleMod {
     public static void init() {
 
