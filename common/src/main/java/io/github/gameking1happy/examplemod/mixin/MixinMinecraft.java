@@ -12,7 +12,7 @@ public class MixinMinecraft {
     
     @Inject(at = @At("TAIL"), method = "<init>")
     private void init(CallbackInfo info) {
-        
+        // Logs the Minecraft version type.
         ExampleMod.LOG.info("MC Version: {}", Minecraft.getInstance().getVersionType());
     }
 }

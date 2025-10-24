@@ -13,10 +13,13 @@ import static net.fabricmc.loader.api.FabricLoader.getInstance;
 public class ExampleModFabric implements ModInitializer {
 
     public void onInitialize() {
+        // Register the configs.
         NeoForgeConfigRegistry.INSTANCE.register(MOD_ID, ModConfig.Type.COMMON, Common.SPEC, MOD_ID + "-common.toml");
         NeoForgeConfigRegistry.INSTANCE.register(MOD_ID, ModConfig.Type.CLIENT, Client.SPEC, MOD_ID + "-client.toml");
         NeoForgeConfigRegistry.INSTANCE.register(MOD_ID, ModConfig.Type.SERVER, Server.SPEC, MOD_ID + "-server.toml");
+        // Register the config screen.
         ConfigScreenFactoryRegistry.INSTANCE.register(MOD_ID, ConfigurationScreen::new);
+        // Initialize the mod.
         ExampleMod.init();
         if (getInstance().getEnvironmentType() == EnvType.CLIENT) {
             ExampleMod.initclient();

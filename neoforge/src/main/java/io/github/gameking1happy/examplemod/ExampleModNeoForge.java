@@ -1,6 +1,9 @@
 package io.github.gameking1happy.examplemod;
 
+import com.mojang.authlib.minecraft.client.MinecraftClient;
 import io.github.gameking1happy.examplemod.config.*;
+import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.Component;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -9,6 +12,7 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 
 import static io.github.gameking1happy.examplemod.ExampleMod.MOD_ID;
 import static net.neoforged.fml.loading.FMLEnvironment.dist;
@@ -40,6 +44,12 @@ public class ExampleModNeoForge {
         }
         else {
             throw new IllegalStateException("Unknown ModConfigSpec Loaded.");
+        }
+    }
+    public static void joinedWorld(EntityJoinLevelEvent event) {
+        if(event.getEntity() instanceof net.minecraft.world.entity.player.Player) {
+            assert Minecraft.getInstance().player != null;
+            Minecraft.getInstance().player.sendSystemMessage(Component.nullToEmpty("test"));
         }
     }
 }

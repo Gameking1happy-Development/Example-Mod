@@ -22,3 +22,17 @@ build
 eclipse
 run
 runs
+
+# include build libs for publishing
+!common/build
+common/build/*
+!common/build/libs/
+!common/build/libs/**
+!fabric/build
+fabric/build/**
+!fabric/build/libs/
+!fabric/build/libs/**
+!neoforge/build
+neoforge/build/**
+!neoforge/build/libs/
+!neoforge/build/libs/**

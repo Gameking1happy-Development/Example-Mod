@@ -13,7 +13,7 @@ public class MixinTitleScreen {
     
     @Inject(at = @At("HEAD"), method = "init()V")
     private void init(CallbackInfo info) {
-        
+        // Logs the Minecraft version type.
         ExampleMod.LOG.info("MC Version: {}", Minecraft.getInstance().getVersionType());
     }
 }
