@@ -26,22 +26,27 @@
   ],
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",
-    "fabric-api": "*",
+    "fabric-api": ">=${fabric_version}",
     "minecraft": "${minecraft_version}",
     "java": ">=${java_version}",
     "forgeconfigapiport": ">=${fcap_version}",
     "gk1hcore":">=${gk1hcore_version}"
-
-  },
-  "suggests": {
-    "another-mod": "*"
   },
   "custom": {
     "modmenu": {
       "links": {
         "modmenu.discord": "https://discord.gg/AwJvGzH"
-      }
+      },
+      "update_checker": true
     },
-    "update_checker": true
+    "mc-publish": {
+      "dependencies": [
+        "fabricloader@>=${fabric_loader_version}#(ignore)",
+        "minecraft@${minecraft_version}#(ignore)",
+        "java@>=${java_version}#(ignore)",
+        "forgeconfigapiport@>=${fcap_version}(required){modrinth:ohNO6lps}{curseforge:547434}",
+        "gk1hcore@>=${gk1hcore_version}(required){modrinth:vjOWyxXu}{curseforge:1369996}"
+      ]
+    }
   }
 }
