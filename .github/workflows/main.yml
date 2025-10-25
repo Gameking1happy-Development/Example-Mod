@@ -1,0 +1,59 @@
+on:
+  release:
+    types: [published]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get required Java version
+        id: gradle-properties
+        uses: christian-draeger/read-properties@1.1.1
+        with:
+          path: gradle.properties
+          properties: java_version
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ steps.gradle-properties.outputs.java_version }}
+
+      - name: Build artifacts
+        run: ./gradlew clean build --no-daemon
+      - name: Fabric
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          # Only include this section if you wish to publish
+          # your assets on Modrinth.
+          modrinth-id: MODRINTHID
+          modrinth-token: ${{ secrets.GK1H_MODRINTH_API_KEY }}
+          files: |
+            fabric/build/libs/!(*-@(dev|shadow|sources|javadoc).jar)
+            fabric/build/libs/*-@(dev|sources|javadoc).jar
+          # Only include this section if you wish to publish
+          # your assets on CurseForge.
+          curseforge-id: CURSEFORGEID
+          curseforge-token: ${{ secrets.GK1H_CURSEFORGE_API_KEY }}
+          java: |
+            21
+            22
+      - name: NeoForge
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          # Only include this section if you wish to publish
+          # your assets on Modrinth.
+          modrinth-id: MODRINTHID
+          modrinth-token: ${{ secrets.GK1H_MODRINTH_API_KEY }}
+          files: |
+            neoforge/build/libs/!(*-@(dev|shadow|sources|javadoc).jar)
+            neoforge/build/libs/*-@(dev|sources|javadoc).jar
+          # Only include this section if you wish to publish
+          # your assets on CurseForge.
+          curseforge-id: CURSEFORGEID
+          curseforge-token: ${{ secrets.GK1H_CURSEFORGE_API_KEY }}
+          java: |
+            21
+            22

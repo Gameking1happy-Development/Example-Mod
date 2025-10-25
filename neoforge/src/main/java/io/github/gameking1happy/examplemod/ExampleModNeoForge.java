@@ -1,6 +1,5 @@
 package io.github.gameking1happy.examplemod;
 
-import com.mojang.authlib.minecraft.client.MinecraftClient;
 import io.github.gameking1happy.examplemod.config.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -10,9 +9,10 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.config.ModConfigEvent;
+import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
-import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.common.NeoForge;
 
 import static io.github.gameking1happy.examplemod.ExampleMod.MOD_ID;
 import static net.neoforged.fml.loading.FMLEnvironment.dist;
@@ -21,10 +21,10 @@ public class ExampleModNeoForge {
 
     public ExampleModNeoForge(ModContainer modContainer, IEventBus modBus) {
         modContainer.registerConfig(ModConfig.Type.COMMON, Common.SPEC, MOD_ID + "-common.toml");
-        modContainer.registerConfig(ModConfig.Type.CLIENT, Client.SPEC, MOD_ID + "-client.toml");
         modContainer.registerConfig(ModConfig.Type.SERVER, Server.SPEC, MOD_ID + "-server.toml");
-        modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
-        modBus.addListener(ExampleModNeoForge::ConfigLoaded);
+        if (dist == Dist.CLIENT) {
+        initclient(modContainer, modBus);
+        }
     }
 
     private static void ConfigLoaded(ModConfigEvent.Loading event) {
@@ -46,10 +46,14 @@ public class ExampleModNeoForge {
             throw new IllegalStateException("Unknown ModConfigSpec Loaded.");
         }
     }
-    public static void joinedWorld(EntityJoinLevelEvent event) {
-        if(event.getEntity() instanceof net.minecraft.world.entity.player.Player) {
-            assert Minecraft.getInstance().player != null;
-            Minecraft.getInstance().player.sendSystemMessage(Component.nullToEmpty("test"));
-        }
+    public static void joinedWorld(ClientPlayerNetworkEvent.LoggingIn event) {
+        assert Minecraft.getInstance().player != null;
+        Minecraft.getInstance().player.sendSystemMessage(Component.nullToEmpty("test"));
+    }
+    public void initclient(ModContainer modContainer, IEventBus modBus) {
+        modContainer.registerConfig(ModConfig.Type.CLIENT, Client.SPEC, MOD_ID + "-client.toml");
+        modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+        modBus.addListener(ExampleModNeoForge::ConfigLoaded);
+        NeoForge.EVENT_BUS.addListener(ExampleModNeoForge::joinedWorld);
     }
 }
