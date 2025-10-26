@@ -7,7 +7,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5.0.0
       - name: Get required Java version
         id: gradle-properties
         uses: christian-draeger/read-properties@1.1.1
