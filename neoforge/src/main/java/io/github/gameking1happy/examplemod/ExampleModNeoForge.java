@@ -22,8 +22,9 @@ public class ExampleModNeoForge {
     public ExampleModNeoForge(ModContainer modContainer, IEventBus modBus) {
         modContainer.registerConfig(ModConfig.Type.COMMON, Common.SPEC, MOD_ID + "-common.toml");
         modContainer.registerConfig(ModConfig.Type.SERVER, Server.SPEC, MOD_ID + "-server.toml");
+        modBus.addListener(ExampleModNeoForge::ConfigLoaded);
         if (dist == Dist.CLIENT) {
-        initclient(modContainer, modBus);
+        initclient(modContainer);
         }
     }
 
@@ -50,10 +51,9 @@ public class ExampleModNeoForge {
         assert Minecraft.getInstance().player != null;
         Minecraft.getInstance().player.sendSystemMessage(Component.nullToEmpty("test"));
     }
-    public void initclient(ModContainer modContainer, IEventBus modBus) {
+    public void initclient(ModContainer modContainer) {
         modContainer.registerConfig(ModConfig.Type.CLIENT, Client.SPEC, MOD_ID + "-client.toml");
         modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
-        modBus.addListener(ExampleModNeoForge::ConfigLoaded);
         NeoForge.EVENT_BUS.addListener(ExampleModNeoForge::joinedWorld);
     }
 }
