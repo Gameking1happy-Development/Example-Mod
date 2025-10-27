@@ -33,13 +33,6 @@ jobs:
           files: |
             fabric/build/libs/!(*-@(dev|shadow|sources|javadoc).jar)
             fabric/build/libs/*-@(dev|sources|javadoc).jar
-          # Only include this section if you wish to publish
-          # your assets on CurseForge.
-          curseforge-id: CURSEFORGEID
-          curseforge-token: ${{ secrets.GK1H_CURSEFORGE_API_KEY }}
-          java: |
-            21
-            22
       - name: NeoForge
         uses: Kir-Antipov/mc-publish@v3.3
         with:
@@ -50,10 +43,3 @@ jobs:
           files: |
             neoforge/build/libs/!(*-@(dev|shadow|sources|javadoc).jar)
             neoforge/build/libs/*-@(dev|sources|javadoc).jar
-          # Only include this section if you wish to publish
-          # your assets on CurseForge.
-          curseforge-id: CURSEFORGEID
-          curseforge-token: ${{ secrets.GK1H_CURSEFORGE_API_KEY }}
-          java: |
-            21
-            22
