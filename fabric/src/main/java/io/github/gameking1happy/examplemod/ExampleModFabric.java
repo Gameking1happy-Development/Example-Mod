@@ -5,8 +5,10 @@ import fuzs.forgeconfigapiport.fabric.api.neoforge.v4.client.ConfigScreenFactory
 import io.github.gameking1happy.examplemod.config.*;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.network.chat.Component;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 
 import static io.github.gameking1happy.examplemod.ExampleMod.MOD_ID;
 import static net.fabricmc.loader.api.FabricLoader.getInstance;
@@ -30,6 +32,11 @@ public class ExampleModFabric implements ModInitializer {
     public void initclient() {
         NeoForgeConfigRegistry.INSTANCE.register(MOD_ID, ModConfig.Type.CLIENT, Client.SPEC, MOD_ID + "-client.toml");
         ExampleMod.initclient();
+        ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
+            var player = client.player;
+            assert player != null;
+            player.sendSystemMessage(Component.nullToEmpty("test"));
+        });
     }
     public void initserver() {
         ExampleMod.initserver();
