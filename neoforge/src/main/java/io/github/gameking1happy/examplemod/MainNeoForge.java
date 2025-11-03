@@ -1,7 +1,6 @@
 package io.github.gameking1happy.examplemod;
 
 import io.github.gameking1happy.examplemod.config.*;
-import io.github.gameking1happy.examplemod.server.Server;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -15,8 +14,8 @@ import static io.github.gameking1happy.examplemod.Main.MOD_ID;
 public class MainNeoForge {
 
     public MainNeoForge(ModContainer modContainer, IEventBus modBus) {
-        modContainer.registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC, MOD_ID + "-common.toml");
-        modContainer.registerConfig(ModConfig.Type.SERVER, ServerConfig.SPEC, MOD_ID + "-server.toml");
+        modContainer.registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC);
+        modContainer.registerConfig(ModConfig.Type.SERVER, ServerConfig.SPEC);
         modBus.addListener(MainNeoForge::ConfigLoaded);
     }
     private static void ConfigLoaded(ModConfigEvent.Loading event) {
@@ -28,7 +27,7 @@ public class MainNeoForge {
             LOG.info("Ignored client config in main ConfigLoaded event listener.");
         }
         else if (config.getSpec() == ServerConfig.SPEC) {
-            Server.initserver();
+            Main.serverconfigcheck();
         }
         else {
             throw new IllegalStateException("Unknown ModConfigSpec Loaded.");

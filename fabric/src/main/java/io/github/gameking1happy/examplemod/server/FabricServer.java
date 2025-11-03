@@ -1,7 +1,10 @@
 package io.github.gameking1happy.examplemod.server;
 
-public class FabricServer {
-    public static void initserver() {
+import net.fabricmc.api.DedicatedServerModInitializer;
+
+public class FabricServer implements DedicatedServerModInitializer {
+    @Override
+    public void onInitializeServer() {
         Server.initserver();
     }
 }

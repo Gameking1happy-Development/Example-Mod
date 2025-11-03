@@ -43,10 +43,14 @@ configurations {
         canBeResolved = false
         canBeConsumed = true
     }
+    generatedResources {
+        canBeResolved = false
+        canBeConsumed = true
+    }
 }
-
 artifacts {
     commonJava sourceSets.main.java.sourceDirectories.singleFile
     commonResources sourceSets.main.resources.sourceDirectories.singleFile
+    generatedResources file('src/generated/resources/')
 }
-
+sourceSets.main.resources.srcDir('src/generated/resources/') exclude(".cache/**")

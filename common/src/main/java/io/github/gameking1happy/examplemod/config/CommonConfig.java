@@ -7,6 +7,6 @@ import static net.neoforged.neoforge.common.ModConfigSpec.*;
 public class CommonConfig {
     // Common configuration options.
     public static final Builder BUILDER = new Builder();
-    public static final ConfigValue<Boolean> ExampleCommon = makeConfig(BUILDER, "Example Common", "An example common-side configuration option.", "ExampleCommon", true);
+    public static final BooleanValue ExampleCommon = makeConfig(BUILDER, "ExampleCommon", true, "An example common-side configuration option.", null);
     public static final ModConfigSpec SPEC = BUILDER.build();
 }

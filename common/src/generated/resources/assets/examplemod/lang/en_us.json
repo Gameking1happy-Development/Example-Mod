@@ -1,0 +1,15 @@
+{
+  "examplemod.configuration.ExampleClient": "Example Client",
+  "examplemod.configuration.ExampleClient.tooltip": "An example client-side configuration option.",
+  "examplemod.configuration.ExampleCommon": "Example Common",
+  "examplemod.configuration.ExampleCommon.tooltip": "An example common-side configuration option.",
+  "examplemod.configuration.ExampleServer": "Example Server",
+  "examplemod.configuration.ExampleServer.tooltip": "An example server-side configuration option.",
+  "examplemod.configuration.section.examplemod.client.toml": "Client Settings",
+  "examplemod.configuration.section.examplemod.client.toml.title": "Example Client Mod Configuration",
+  "examplemod.configuration.section.examplemod.common.toml": "Common Settings",
+  "examplemod.configuration.section.examplemod.common.toml.title": "Example Mod Common Configuration",
+  "examplemod.configuration.section.examplemod.server.toml": "Server Settings",
+  "examplemod.configuration.section.examplemod.server.toml.title": "Example Server Mod Configuration",
+  "examplemod.configuration.title": "Example Mod Configuration"
+}

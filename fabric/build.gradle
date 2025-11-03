@@ -12,6 +12,13 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     modApi "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${fcap_version}"
     modApi "io.github.gameking1happy.gk1hcore:gk1hcore-fabric-1.21.1:${gk1hcore_version}"
+    modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
+}
+repositories {
+    maven {
+        name = "Terraformers"
+        url = "https://maven.terraformersmc.com/"
+    }
 }
 
 loom {
@@ -37,3 +44,4 @@ loom {
         }
     }
 }
+sourceSets.main.resources { srcDir 'src/generated/resources' }

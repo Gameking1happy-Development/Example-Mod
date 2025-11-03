@@ -7,6 +7,6 @@ import static net.neoforged.neoforge.common.ModConfigSpec.*;
 public class ClientConfig {
     // Client-side configuration options.
     public static final Builder BUILDER = new Builder();
-    public static final ConfigValue<Boolean> ExampleClient = makeConfig(BUILDER,"Example Client","An example client-side configuration option.","ExampleClient", true);
+    public static final BooleanValue ExampleClient = makeConfig(BUILDER,"ExampleClient", true,"An example client-side configuration option.",null);
     public static final ModConfigSpec SPEC = BUILDER.build();
 }

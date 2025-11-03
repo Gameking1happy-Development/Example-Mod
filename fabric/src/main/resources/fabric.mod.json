@@ -38,6 +38,9 @@
     "forgeconfigapiport": ">=${fcap_version}",
     "gk1hcore":">=${gk1hcore_version}"
   },
+  "recommends": {
+    "modmenu": ">=${modmenu_version}"
+  },
   "custom": {
     "modmenu": {
       "links": {

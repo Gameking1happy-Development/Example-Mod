@@ -7,6 +7,6 @@ import static net.neoforged.neoforge.common.ModConfigSpec.*;
 public class ServerConfig {
     // Server-side configuration options.
     public static final Builder BUILDER = new Builder();
-    public static final ConfigValue<Boolean> ExampleServer = makeConfig(BUILDER, "Example Server", "An example server-side configuration option.", "ExampleServer", true);
+    public static final BooleanValue ExampleServer = makeConfig(BUILDER, "ExampleServer", true, "An example server-side configuration option.", null);
     public static final ModConfigSpec SPEC = BUILDER.build();
 }

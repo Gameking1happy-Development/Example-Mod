@@ -9,6 +9,9 @@ configurations {
     commonResources{
         canBeResolved = true
     }
+    generatedResources{
+        canBeResolved = true
+    }
 }
 
 dependencies {
@@ -19,6 +22,7 @@ dependencies {
     }
     commonJava project(path: ':common', configuration: 'commonJava')
     commonResources project(path: ':common', configuration: 'commonResources')
+    generatedResources project(path: ':common', configuration: 'generatedResources')
 }
 
 tasks.named('compileJava', JavaCompile) {
@@ -29,6 +33,8 @@ tasks.named('compileJava', JavaCompile) {
 processResources {
     dependsOn(configurations.commonResources)
     from(configurations.commonResources)
+    dependsOn(configurations.generatedResources) exclude(".cache/**")
+    from(configurations.generatedResources) exclude(".cache/**")
 }
 
 tasks.named('javadoc', Javadoc).configure {
@@ -41,4 +47,6 @@ tasks.named('sourcesJar', Jar) {
     from(configurations.commonJava)
     dependsOn(configurations.commonResources)
     from(configurations.commonResources)
+    dependsOn(configurations.generatedResources) exclude(".cache/**")
+    from(configurations.generatedResources) exclude(".cache/**")
 }

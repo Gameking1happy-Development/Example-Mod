@@ -10,10 +10,19 @@ public class Main {
         LOG.info("Hello from Common init on {}! we are currently in a {} environment!", PLATFORM.getPlatformName(), PLATFORM.getEnvironmentName());
         // Checks the common configuration option.
         if (CommonConfig.ExampleCommon.get()) {
-            LOG.info("ExampleCommon is true!");
+            LOG.info("Example Common is true!");
         }
         else {
-            LOG.info("ExampleCommon is false!");
+            LOG.info("Example Common is false!");
+        }
+    }
+    public static void serverconfigcheck() {
+        // Checks the server configuration option.
+        if (ServerConfig.ExampleServer.get()) {
+            LOG.info("Example Server is true!");
+        }
+        else {
+            LOG.info("Example Server is false!");
         }
     }
     // Mod constants.
