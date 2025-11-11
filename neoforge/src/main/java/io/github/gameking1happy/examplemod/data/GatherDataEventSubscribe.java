@@ -39,11 +39,11 @@ public class GatherDataEventSubscribe {
                 event.includeClient(),
                 new MyLanguageProvider(output)
         );
-        event.getGenerator().addProvider(
+        generator.addProvider(
                 event.includeServer(),
                 blockTagsProvider
         );
-        event.getGenerator().addProvider(
+        generator.addProvider(
                 event.includeServer(),
                 new MyItemTagsProvider(output, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper)
         );

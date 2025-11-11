@@ -9,6 +9,7 @@ import net.neoforged.fml.config.ModConfig;
 
 import static io.github.gameking1happy.examplemod.Main.MOD_ID;
 
+@SuppressWarnings("unused")
 public class MainFabric implements ModInitializer {
     @Override
     public void onInitialize() {
