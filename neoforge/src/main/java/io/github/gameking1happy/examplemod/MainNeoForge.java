@@ -29,8 +29,5 @@ public class MainNeoForge {
         else if (config.getSpec() == ServerConfig.SPEC) {
             Main.serverconfigcheck();
         }
-        else {
-            throw new IllegalStateException("Unknown ModConfigSpec Loaded.");
-        }
     }
 }
