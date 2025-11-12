@@ -5,6 +5,7 @@ plugins {
 }
 dependencies {
     api "io.github.gameking1happy.gk1hcore:gk1hcore-neoforge-1.21.1:${gk1hcore_version}"
+    accessTransformers "io.github.gameking1happy.gk1hcore:gk1hcore-neoforge-1.21.1:${gk1hcore_version}"
 }
 neoForge {
     version = neoforge_version

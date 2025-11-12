@@ -8,10 +8,10 @@
     "1.0.3_1": "Edited mixins to reduce spam.",
     "1.0.4": "Data generation, making client and server classes, renamed classes, reformated everything, and updated Gradle, Loom, and ModDevGradle.",
     "21.1.1.0": "Changed versioning to [Minecraft Minor].[Minecraft Patch].[Major].[Minor].",
-    "21.1.1.1-beta1": "Many code cleanups and improvements."
+    "21.1.1.1": "Many code cleanups, improvements, etc."
   },
   "promos": {
-    "1.21.1-latest": "21.1.1.1-beta1",
-    "1.21.1-recommended": "21.1.1.0"
+    "1.21.1-latest": "21.1.1.1",
+    "1.21.1-recommended": "21.1.1.1"
   }
 }
