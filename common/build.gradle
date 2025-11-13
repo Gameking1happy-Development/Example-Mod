@@ -17,21 +17,20 @@ neoForge {
 }
 repositories {
     maven {
-        name = "Fuzs Mod Resources"
-        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
-    }
-    maven {
         name = "GK1H Mod Resources"
         url = "https://raw.githubusercontent.com/Gameking1happy-Development/Mod-Resources/main/maven/"
     }
+    maven {
+        url = "https://thedarkcolour.github.io/KotlinForForge/"
+    }
 }
 dependencies {
-    compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
+    compileOnly("org.spongepowered:mixin:0.8.5")
     // fabric and neoforge both bundle mixinextras, so it is safe to use it in common
-    compileOnly group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.5.0'
-    annotationProcessor group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.5.0'
-    api "fuzs.forgeconfigapiport:forgeconfigapiport-common-neoforgeapi:${fcap_version}"
-    api "io.github.gameking1happy.gk1hcore:gk1hcore-common-1.21.1:${gk1hcore_version}"
+    compileOnly("io.github.llamalad7:mixinextras-common:0.5.0")
+    annotationProcessor("io.github.llamalad7:mixinextras-common:0.5.0")
+    implementation("me.fzzyhmstrs:fzzy_config:${fzzy_config_version}+neoforge")
+    api("io.github.gameking1happy.gk1hcore:gk1hcore-common-1.21.1:${gk1hcore_version}")
 }
 
 configurations {

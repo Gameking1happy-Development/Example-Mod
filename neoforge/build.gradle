@@ -3,9 +3,15 @@ plugins {
     id 'multiloader-loader'
     id 'net.neoforged.moddev'
 }
+repositories {
+    maven {
+        url = "https://thedarkcolour.github.io/KotlinForForge/"
+    }
+}
 dependencies {
-    api "io.github.gameking1happy.gk1hcore:gk1hcore-neoforge-1.21.1:${gk1hcore_version}"
-    accessTransformers "io.github.gameking1happy.gk1hcore:gk1hcore-neoforge-1.21.1:${gk1hcore_version}"
+    api("io.github.gameking1happy.gk1hcore:gk1hcore-neoforge-1.21.1:${gk1hcore_version}")
+    accessTransformers("io.github.gameking1happy.gk1hcore:gk1hcore-neoforge-1.21.1:${gk1hcore_version}")
+    implementation("me.fzzyhmstrs:fzzy_config:${fzzy_config_version}+neoforge")
 }
 neoForge {
     version = neoforge_version

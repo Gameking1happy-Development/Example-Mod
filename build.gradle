@@ -7,8 +7,8 @@ plugins {
 subprojects {
     repositories {
         maven {
-            name = "Fuzs Mod Resources"
-            url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+            name = "FzzyMaven"
+            url = "https://maven.fzzyhmstrs.me/"
         }
         maven {
             name = "GK1H Mod Resources"
