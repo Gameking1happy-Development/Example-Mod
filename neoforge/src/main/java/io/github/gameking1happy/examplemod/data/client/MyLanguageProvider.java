@@ -19,18 +19,11 @@ public class MyLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         // Adds a translation with the given key and the given value.
-        add("examplemod.configuration.ExampleClient", "Example Client");
-        add("examplemod.configuration.ExampleClient.tooltip", "An example client-side configuration option.");
-        add("examplemod.configuration.ExampleCommon", "Example Common");
-        add("examplemod.configuration.ExampleCommon.tooltip", "An example common-side configuration option.");
-        add("examplemod.configuration.ExampleServer", "Example Server");
-        add("examplemod.configuration.ExampleServer.tooltip", "An example server-side configuration option.");
-        add("examplemod.configuration.section.examplemod.client.toml", "Client Settings");
-        add("examplemod.configuration.section.examplemod.client.toml.title", "Example Mod Client Configuration");
-        add("examplemod.configuration.section.examplemod.common.toml", "Common Settings");
-        add("examplemod.configuration.section.examplemod.common.toml.title", "Example Mod Common Configuration");
-        add("examplemod.configuration.section.examplemod.server.toml", "Server Settings");
-        add("examplemod.configuration.section.examplemod.server.toml.title", "Example Mod Server Configuration");
-        add("examplemod.configuration.title", "Example Mod Configuration");
+        add("examplemod.server_config", "Example Server Config");
+        add("examplemod.server_config.ExampleServer", "Example Server Config Value");
+        add("examplemod.server_config.ExampleServer.desc", "Example Server Config Value Description.");
+        add("examplemod.client_config", "Example Client Config");
+        add("examplemod.client_config.ExampleClient", "Example Client Config Value");
+        add("examplemod.client_config.ExampleClient.desc", "Example Client Config Value Description.");
     }
 }
