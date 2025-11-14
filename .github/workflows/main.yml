@@ -31,7 +31,7 @@ jobs:
           modrinth-id: MODRINTHID
           modrinth-token: ${{ secrets.GK1H_MODRINTH_API_KEY }}
           curseforge-id: CURSEFORGEID
-          curseforge-token: ${{ GK1H_CURSEFORGE_API_KEY }}
+          curseforge-token: ${{ secrets.GK1H_CURSEFORGE_API_KEY }}
           files: |
             fabric/build/libs/!(*-@(dev|shadow|sources|javadoc).jar)
             fabric/build/libs/*-@(dev|sources|javadoc).jar
@@ -43,7 +43,7 @@ jobs:
           modrinth-id: MODRINTHID
           modrinth-token: ${{ secrets.GK1H_MODRINTH_API_KEY }}
           curseforge-id: CURSEFORGEID
-          curseforge-token: ${{ GK1H_CURSEFORGE_API_KEY }}
+          curseforge-token: ${{ secrets.GK1H_CURSEFORGE_API_KEY }}
           files: |
             neoforge/build/libs/!(*-@(dev|shadow|sources|javadoc).jar)
             neoforge/build/libs/*-@(dev|sources|javadoc).jar
