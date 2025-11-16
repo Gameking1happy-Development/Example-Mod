@@ -1,3 +1,4 @@
+//file:noinspection GrUnresolvedAccess
 plugins {
     id 'multiloader-common'
     id 'net.neoforged.moddev'

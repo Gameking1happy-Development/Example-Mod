@@ -6,17 +6,27 @@ import me.fzzyhmstrs.fzzy_config.api.RegisterType;
 
 import static io.github.gameking1happy.examplemod.Main.LOG;
 
+/**
+ * Client-side code.
+ */
+@SuppressWarnings({"unused", "CanBeFinal"})
 public class Client {
+    /**
+     * The client configuration for the mod.
+     */
     public static ClientConfig clientconfig = ConfigApiJava.registerAndLoadConfig(ClientConfig::new, RegisterType.CLIENT);
+    /**
+     * Example client configuration value.
+     */
     public static boolean ExampleClient = clientconfig.ExampleClient.get();
+    /**
+     * Client initialization.
+     */
     public static void initclient() {
-        // Gives a startup message to the log.
         LOG.info("Client-side.");
-        // Checks the client configuration option.
         if (ExampleClient) {
             LOG.info("Example Client is true!");
-        }
-        else {
+        } else {
             LOG.info("Example Client is false!");
         }
     }

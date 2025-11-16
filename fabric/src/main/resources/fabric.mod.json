@@ -36,7 +36,7 @@
     "minecraft": "${minecraft_version}",
     "java": ">=${java_version}",
     "fzzy_config": ">=${fzzy_config_version}",
-    "gk1hcore":">=${gk1hcore_version}"
+    "gk1hcore": ">=${gk1hcore_version}"
   },
   "recommends": {
     "modmenu": ">=${modmenu_version}"
@@ -53,8 +53,8 @@
         "fabricloader@>=${fabric_loader_version}#(ignore)",
         "minecraft@${minecraft_version}#(ignore)",
         "java@>=${java_version}#(ignore)",
-        "fzzy_config@>=${fzzy_config_version}(required){modrinth:hYykXjDp}",
-        "gk1hcore@>=${gk1hcore_version}(required){modrinth:vjOWyxXu}"
+        "fzzy_config@>=${fzzy_config_version}(required){modrinth:hYykXjDp}{curseforge:1005914}",
+        "gk1hcore@>=${gk1hcore_version}(required){modrinth:vjOWyxXu}{curseforge:1384685}"
       ]
     }
   }

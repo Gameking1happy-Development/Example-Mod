@@ -7,18 +7,26 @@ import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
+
 import java.util.concurrent.CompletableFuture;
 
 import static io.github.gameking1happy.examplemod.Main.MOD_ID;
 
+/**
+ * Item tags datagen.
+ */
 public class MyItemTagsProvider extends ItemTagsProvider {
-    // Get parameters from GatherDataEvent.
-    public MyItemTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagsProvider.TagLookup<Block>> blockTagsProvider, ExistingFileHelper existingFileHelper) {
+    /**
+     * @param output Pack output.
+     * @param lookupProvider Lookup provider.
+     * @param blockTagsProvider Block tags provider.
+     * @param existingFileHelper Existing file helper.
+     */
+    public MyItemTagsProvider(@NotNull PackOutput output, @NotNull CompletableFuture<HolderLookup.Provider> lookupProvider, @NotNull CompletableFuture<TagsProvider.TagLookup<Block>> blockTagsProvider, @NotNull ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, blockTagsProvider, MOD_ID, existingFileHelper);
     }
-    // Add your tag entries here.
     @Override
     protected void addTags(HolderLookup.@NotNull Provider lookupProvider) {
-            // Put stuff here.
-        }
+        // Add your tag entries here.
+    }
 }

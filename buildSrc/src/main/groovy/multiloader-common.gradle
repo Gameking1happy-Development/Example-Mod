@@ -1,4 +1,6 @@
 //file:noinspection GroovyAssignabilityCheck
+//file:noinspection ForeignDelegate
+//file:noinspection GrUnresolvedAccess
 plugins {
     id 'java-library'
     id 'maven-publish'
@@ -105,13 +107,13 @@ processResources {
 publishing {
     publications {
         register('mavenJava', MavenPublication) {
-            artifactId base.archivesName.get()
+            artifactId = base.archivesName.get()
             from components.java
         }
     }
     repositories {
         maven {
-            url System.getenv('local_maven_url')
+            url = System.getenv('local_maven_url')
         }
     }
 }

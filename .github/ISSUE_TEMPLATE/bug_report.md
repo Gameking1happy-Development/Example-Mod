@@ -7,29 +7,30 @@ assignees: Gameking1happy
 type: Bug
 
 ---
+
 <!--IF THIS IS A SECURITY VULNERABILITY OPEN A REPORT FOR THAT HERE: https://github.com/Gameking1happy-Development/Example-Mod/security/advisories/new-->
-**Describe the bug**  
+**Describe the bug**
 <!--Give a clear and concise description of what the bug is.-->
 
-**To Reproduce**  
+**To Reproduce**
 <!--Provide steps to reproduce the behavior, like so:  
 1. Go to '...'  
 2. Click on '....'  
 3. Scroll down to '....'  
 4. See error-->
 
-**Expected behavior**  
+**Expected behavior**
 <!--Give a clear and concise description of what you expected to happen.-->
 
-**Screenshots**  
+**Screenshots**
 <!--If applicable, add screenshots to help explain your problem.-->
 
-**Device, Launcher, and Version (please complete the following information):**  
-<!--Windows/MacOS/Linux  
+**Device, Launcher, and Version (please complete the following information):**
+<!--Windows/macOS/Linux  
 OS Version  
 Modrinth/CurseForge/ATLauncher/Prism Launcher/Minecraft Launcher/Other  
 Client/Server  
 Data Pack Version-->
 
-**Additional context**  
+**Additional context**
 <!--Add any other context about the problem here.-->

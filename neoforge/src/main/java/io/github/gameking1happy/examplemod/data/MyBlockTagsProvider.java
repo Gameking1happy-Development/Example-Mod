@@ -10,14 +10,20 @@ import java.util.concurrent.CompletableFuture;
 
 import static io.github.gameking1happy.examplemod.Main.MOD_ID;
 
+/**
+ * Block tags datagen.
+ */
 public class MyBlockTagsProvider extends BlockTagsProvider {
-    // Get parameters from GatherDataEvent.
-    public MyBlockTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, ExistingFileHelper existingFileHelper) {
+    /**
+     * @param output Pack output.
+     * @param lookupProvider Lookup provider.
+     * @param existingFileHelper Existing file helper.
+     */
+    public MyBlockTagsProvider(@NotNull PackOutput output, @NotNull CompletableFuture<HolderLookup.Provider> lookupProvider, @NotNull ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, MOD_ID, existingFileHelper);
     }
-    // Add your tag entries here.
     @Override
     protected void addTags(HolderLookup.@NotNull Provider lookupProvider) {
-            // Put stuff here.
-        }
+        // Add your tag entries here.
+    }
 }

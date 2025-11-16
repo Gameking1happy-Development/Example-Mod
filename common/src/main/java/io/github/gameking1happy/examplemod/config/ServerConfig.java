@@ -9,11 +9,21 @@ import static io.github.gameking1happy.examplemod.Main.MOD_ID;
 import static io.github.gameking1happy.gk1hcore.Main.fNAP;
 import static me.fzzyhmstrs.fzzy_config.annotations.Action.RELOG;
 
+/**
+ * The server configuration for the mod.
+ */
+@SuppressWarnings("CanBeFinal")
 @RequiresAction(action = RELOG)
 public class ServerConfig extends Config {
+    /**
+     * Example server configuration value.
+     */
+    @Comment("Example Server Config Value.")
+    public ValidatedBoolean ExampleServer = new ValidatedBoolean(true);
+    /**
+     * The constructor method.
+     */
     public ServerConfig() {
         super(fNAP(MOD_ID, "server_config"));
     }
-    @Comment("Example Server Config Value.")
-    public ValidatedBoolean ExampleServer = new ValidatedBoolean(true);
 }

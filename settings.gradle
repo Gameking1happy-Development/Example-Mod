@@ -1,3 +1,5 @@
+//file:noinspection ForeignDelegate
+//file:noinspection GrUnresolvedAccess
 pluginManagement {
     repositories {
         gradlePluginPortal()
