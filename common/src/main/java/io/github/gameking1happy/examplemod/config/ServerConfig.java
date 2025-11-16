@@ -21,6 +21,11 @@ public class ServerConfig extends Config {
     @Comment("Example Server Config Value.")
     public ValidatedBoolean ExampleServer = new ValidatedBoolean(true);
     /**
+     * Example pack configuration value.
+     */
+    @Comment("Example Pack Config Value.")
+    public ValidatedBoolean ExamplePack = new ValidatedBoolean(true);
+    /**
      * The constructor method.
      */
     public ServerConfig() {

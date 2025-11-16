@@ -1,15 +1,10 @@
 {
-  "examplemod.configuration.ExampleClient": "Example Client",
-  "examplemod.configuration.ExampleClient.tooltip": "An example client-side configuration option.",
-  "examplemod.configuration.ExampleCommon": "Example Common",
-  "examplemod.configuration.ExampleCommon.tooltip": "An example common-side configuration option.",
-  "examplemod.configuration.ExampleServer": "Example Server",
-  "examplemod.configuration.ExampleServer.tooltip": "An example server-side configuration option.",
-  "examplemod.configuration.section.examplemod.client.toml": "Client Settings",
-  "examplemod.configuration.section.examplemod.client.toml.title": "Example Mod Client Configuration",
-  "examplemod.configuration.section.examplemod.common.toml": "Common Settings",
-  "examplemod.configuration.section.examplemod.common.toml.title": "Example Mod Common Configuration",
-  "examplemod.configuration.section.examplemod.server.toml": "Server Settings",
-  "examplemod.configuration.section.examplemod.server.toml.title": "Example Mod Server Configuration",
-  "examplemod.configuration.title": "Example Mod Configuration"
+  "examplemod.client_config": "Example Client Config",
+  "examplemod.client_config.ExampleClient": "Example Client Config Value",
+  "examplemod.client_config.ExampleClient.desc": "Example Client Config Value Description.",
+  "examplemod.server_config": "Example Server Config",
+  "examplemod.server_config.ExamplePack": "Example Pack Config Value",
+  "examplemod.server_config.ExamplePack.desc": "Example Pack Config Value Description.",
+  "examplemod.server_config.ExampleServer": "Example Server Config Value",
+  "examplemod.server_config.ExampleServer.desc": "Example Server Config Value Description."
 }

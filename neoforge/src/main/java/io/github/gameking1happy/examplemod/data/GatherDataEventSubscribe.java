@@ -1,6 +1,7 @@
 package io.github.gameking1happy.examplemod.data;
 
 import io.github.gameking1happy.examplemod.data.client.MyLanguageProvider;
+import io.github.gameking1happy.examplemod.data.examplepack.ExamplePackRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -27,6 +28,7 @@ public class GatherDataEventSubscribe {
     public static void gatherData(@NotNull GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
+        PackOutput ExamplePackOutput = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         BlockTagsProvider blockTagsProvider = new MyBlockTagsProvider(output, lookupProvider, existingFileHelper);
@@ -34,5 +36,6 @@ public class GatherDataEventSubscribe {
         generator.addProvider(event.includeClient(), new MyLanguageProvider(output));
         generator.addProvider(event.includeServer(), blockTagsProvider);
         generator.addProvider(event.includeServer(), new MyItemTagsProvider(output, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
+        generator.addProvider(event.includeServer(), new ExamplePackRecipeProvider(ExamplePackOutput,lookupProvider));
     }
 }

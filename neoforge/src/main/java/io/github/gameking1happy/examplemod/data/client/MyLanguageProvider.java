@@ -22,6 +22,8 @@ public class MyLanguageProvider extends LanguageProvider {
         add("examplemod.server_config", "Example Server Config");
         add("examplemod.server_config.ExampleServer", "Example Server Config Value");
         add("examplemod.server_config.ExampleServer.desc", "Example Server Config Value Description.");
+        add("examplemod.server_config.ExamplePack", "Example Pack Config Value");
+        add("examplemod.server_config.ExamplePack.desc", "Example Pack Config Value Description.");
         add("examplemod.client_config", "Example Client Config");
         add("examplemod.client_config.ExampleClient", "Example Client Config Value");
         add("examplemod.client_config.ExampleClient.desc", "Example Client Config Value Description.");

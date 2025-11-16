@@ -1,10 +1,12 @@
 package io.github.gameking1happy.examplemod;
 
 import io.github.gameking1happy.examplemod.config.ServerConfig;
+import io.github.gameking1happy.examplemod.packs.Packs;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static io.github.gameking1happy.gk1hcore.Main.addClass;
 import static io.github.gameking1happy.gk1hcore.platform.Services.PLATFORM;
 
 /**
@@ -33,10 +35,15 @@ public class Main {
      */
     public static boolean ExampleServer = serverconfig.ExampleServer.get();
     /**
+     * Example pack configuration value.
+     */
+    public static boolean ExamplePack = serverconfig.ExamplePack.get();
+    /**
      * Common method for initializing the mod.
      */
     public static void init() {
         LOG.info("Hello from Common init on {}! we are currently in a {} environment!", PLATFORM.getPlatformName(), PLATFORM.getEnvironmentName());
+        addClass(new Packs());
         if (ExampleServer) {
             LOG.info("Example Server is true!");
         } else {
