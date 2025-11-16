@@ -11,10 +11,11 @@
     "21.1.1.1": "Many code cleanups, improvements, etc.",
     "21.1.1.2": "Switched to Fzzy Config.",
     "21.1.1.3": "Added documentation and cleaned up code.",
-    "21.1.1.4": "Added an example pack."
+    "21.1.1.4": "Added an example pack.",
+    "21.1.1.5": "Fix."
   },
   "promos": {
-    "1.21.1-latest": "21.1.1.4",
-    "1.21.1-recommended": "21.1.1.4"
+    "1.21.1-latest": "21.1.1.5",
+    "1.21.1-recommended": "21.1.1.5"
   }
 }

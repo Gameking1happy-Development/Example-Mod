@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
-import static io.github.gameking1happy.gk1hcore.Main.MOD_ID;
+import static io.github.gameking1happy.examplemod.Main.MOD_ID;
 import static io.github.gameking1happy.gk1hcore.Main.fNAP;
 
 /**
