@@ -28,7 +28,7 @@ public class GatherDataEventSubscribe {
     public static void gatherData(@NotNull GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        PackOutput ExamplePackOutput = generator.getPackOutput();
+        PackOutput ExamplePackOutput = generator.getPackOutput("examplepack");
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         BlockTagsProvider blockTagsProvider = new MyBlockTagsProvider(output, lookupProvider, existingFileHelper);
