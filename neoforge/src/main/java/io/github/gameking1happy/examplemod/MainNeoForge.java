@@ -5,7 +5,7 @@ import net.neoforged.fml.common.Mod;
 import static io.github.gameking1happy.examplemod.Main.MOD_ID;
 
 /**
- * The NeoForge main method for the mod.
+ * The NeoForge main class for the mod.
  */
 @SuppressWarnings("unused")
 @Mod(MOD_ID)

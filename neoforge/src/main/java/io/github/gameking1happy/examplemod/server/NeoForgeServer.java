@@ -6,7 +6,7 @@ import net.neoforged.fml.common.Mod;
 import static io.github.gameking1happy.examplemod.Main.MOD_ID;
 
 /**
- * The NeoForge server-side method for the mod.
+ * NeoForge server-side code.
  */
 @SuppressWarnings("unused")
 @Mod(value = MOD_ID, dist = Dist.DEDICATED_SERVER)

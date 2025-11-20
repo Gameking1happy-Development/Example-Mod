@@ -10,7 +10,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import static io.github.gameking1happy.examplemod.Main.MOD_ID;
 
 /**
- * The NeoForge client-side method for the mod.
+ * NeoForge client-side code.
  */
 @SuppressWarnings("unused")
 @Mod(value = MOD_ID, dist = Dist.CLIENT)

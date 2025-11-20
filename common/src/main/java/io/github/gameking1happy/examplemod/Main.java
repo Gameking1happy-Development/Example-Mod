@@ -10,7 +10,7 @@ import static io.github.gameking1happy.gk1hcore.Main.addClass;
 import static io.github.gameking1happy.gk1hcore.platform.Services.PLATFORM;
 
 /**
- * The main method for the mod.
+ * The main class for the mod.
  */
 @SuppressWarnings("CanBeFinal")
 public class Main {
