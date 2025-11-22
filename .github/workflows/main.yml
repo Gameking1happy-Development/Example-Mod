@@ -26,11 +26,7 @@ jobs:
       - name: Fabric
         uses: Kir-Antipov/mc-publish@v3.3
         with:
-          # Only include this section if you wish to publish
-          # your assets on Modrinth.
-          modrinth-id: MODRINTHID
           modrinth-token: ${{ secrets.GK1H_MODRINTH_API_KEY }}
-          curseforge-id: CURSEFORGEID
           curseforge-token: ${{ secrets.GK1H_CURSEFORGE_API_KEY }}
           files: |
             fabric/build/libs/!(*-@(dev|shadow|sources|javadoc)).jar
@@ -38,11 +34,7 @@ jobs:
       - name: NeoForge
         uses: Kir-Antipov/mc-publish@v3.3
         with:
-          # Only include this section if you wish to publish
-          # your assets on Modrinth.
-          modrinth-id: MODRINTHID
           modrinth-token: ${{ secrets.GK1H_MODRINTH_API_KEY }}
-          curseforge-id: CURSEFORGEID
           curseforge-token: ${{ secrets.GK1H_CURSEFORGE_API_KEY }}
           files: |
             neoforge/build/libs/!(*-@(dev|shadow|sources|javadoc)).jar
