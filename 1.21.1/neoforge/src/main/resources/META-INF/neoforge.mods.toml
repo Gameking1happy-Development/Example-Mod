@@ -41,7 +41,7 @@ side = "BOTH"
 [dependencies.${ mod_id }.mc-publish]
 ignore = false
 modrinth = "vjOWyxXu"
-curseforge = "1384685"
+curseforge = 1384685
 [[dependencies.${ mod_id }]]
 modId = "fzzy_config"
 type = "required"
@@ -51,9 +51,9 @@ side = "BOTH"
 [dependencies.${ mod_id }.mc-publish]
 ignore = false
 modrinth = "hYykXjDp"
-curseforge = "1005914"
+curseforge = 1005914
 [mc-publish]
-modrinth="MODRINTHID"
+modrinth = "MODRINTHID"
 curseforge = "CURSEFORGEID"
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
