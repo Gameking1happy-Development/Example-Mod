@@ -41,7 +41,7 @@ side = "BOTH"
 [dependencies.${ mod_id }.mc-publish]
 ignore = false
 modrinth = "vjOWyxXu"
-curseforge = 1384685
+curseforge = "1384685"
 [[dependencies.${ mod_id }]]
 modId = "fzzy_config"
 type = "required"
@@ -51,7 +51,7 @@ side = "BOTH"
 [dependencies.${ mod_id }.mc-publish]
 ignore = false
 modrinth = "hYykXjDp"
-curseforge = 1005914
+curseforge = "1005914"
 [mc-publish]
 modrinth = "MODRINTHID"
 curseforge = "CURSEFORGEID"

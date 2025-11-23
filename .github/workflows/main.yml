@@ -37,7 +37,7 @@ jobs:
           modrinth-token: ${{ secrets.GK1H_MODRINTH_API_KEY }}
           curseforge-token: ${{ secrets.GK1H_CURSEFORGE_API_KEY }}
           files: |
-            ${{ steps.version.outputs.v }}/fabric/build/libs/*(!(*-dev|*-shadow|*-sources|*-javadoc).jar)
+            ${{ steps.version.outputs.v }}/fabric/build/libs/!(*-@(dev|shadow|sources|javadoc)).jar
             ${{ steps.version.outputs.v }}/fabric/build/libs/*-@(sources|javadoc).jar
       - name: NeoForge
         uses: Kir-Antipov/mc-publish@v3.3
@@ -45,5 +45,5 @@ jobs:
           modrinth-token: ${{ secrets.GK1H_MODRINTH_API_KEY }}
           curseforge-token: ${{ secrets.GK1H_CURSEFORGE_API_KEY }}
           files: |
-            ${{ steps.version.outputs.v }}/neoforge/build/libs/*(!(*-dev|*-shadow|*-sources|*-javadoc).jar)
+            ${{ steps.version.outputs.v }}/neoforge/build/libs/!(*-@(dev|shadow|sources|javadoc)).jar
             ${{ steps.version.outputs.v }}/neoforge/build/libs/*-@(sources|javadoc).jar
