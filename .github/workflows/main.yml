@@ -2,10 +2,28 @@ on:
   release:
     types: [ published ]
 jobs:
+  getversion:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      version: ${{ steps.version.outputs.VERSION }}
+    steps:
+      - name: Version
+        id: version
+        run: |
+          v="${{ github.ref_name }}"
+          echo VERSION="1.${v%.*.*}" >> $GITHUB_OUTPUT
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    needs: getversion
+    env:
+      ver: ${{needs.getversion.outputs.version}}
+    defaults:
+      run:
+        working-directory: ./$ver
     steps:
       - uses: actions/checkout@v5.0.0
       - name: Get required Java version
