@@ -19,11 +19,9 @@ jobs:
     permissions:
       contents: write
     needs: getversion
-    env:
-      ver: ${{needs.getversion.outputs.version}}
     defaults:
       run:
-        working-directory: ./$ver
+        working-directory: ./${{needs.getversion.outputs.version}}
     steps:
       - uses: actions/checkout@v5.0.0
       - name: Get required Java version
