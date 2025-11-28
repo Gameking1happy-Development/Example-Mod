@@ -40,7 +40,7 @@ ordering = "NONE"
 side = "BOTH"
 [dependencies.${ mod_id }.mc-publish]
 ignore = false
-modrinth = "vjOWyxXu"
+modrinth = "gk1h-core"
 curseforge = "1384685"
 [[dependencies.${ mod_id }]]
 modId = "fzzy_config"
@@ -50,7 +50,7 @@ ordering = "NONE"
 side = "BOTH"
 [dependencies.${ mod_id }.mc-publish]
 ignore = false
-modrinth = "hYykXjDp"
+modrinth = "fzzy-config"
 curseforge = "1005914"
 [mc-publish]
 modrinth = "MODRINTHID"

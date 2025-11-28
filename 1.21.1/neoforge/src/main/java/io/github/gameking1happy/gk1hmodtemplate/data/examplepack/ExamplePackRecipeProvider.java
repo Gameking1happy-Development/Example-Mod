@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.concurrent.CompletableFuture;
 
 import static io.github.gameking1happy.gk1hmodtemplate.Main.MOD_ID;
-import static io.github.gameking1happy.gk1hcore.Main.fNAP;
+import static io.github.gameking1happy.gk1hcore.data.CoreData.*;
 
 /**
  * Example Pack datagen.
@@ -37,6 +37,6 @@ public class ExamplePackRecipeProvider extends RecipeProvider {
                 .pattern(" D ")
                 .define('D', Items.DIRT)
                 .unlockedBy("has_dirt",has(Items.DIRT))
-                .save(output, fNAP(MOD_ID,"examplerecipe"));
+                .save(output, fNaP(MOD_ID,"examplerecipe"));
     }
 }
